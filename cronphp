@@ -1,0 +1,2 @@
+#*/1 * * * *	root	wget http://localhost/helper/notification-sender
+#0 0 * * * *	root	wget http://localhost/client/offers/cron-check-offer

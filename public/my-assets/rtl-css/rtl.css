@@ -1,0 +1,15 @@
+.main-menu .navbar-header {
+    height : 5.75rem;
+  }
+
+.main-menu.menu-light .navigation > li.active > a {
+    background : -webkit-linear-gradient(332deg, #4a9e73, rgb(74, 158, 115));
+    background :         linear-gradient(118deg, #4a9e73, rgb(74, 158, 115));
+    box-shadow : 0 0 2px 1px rgb(74, 158, 115);
+  }
+
+.main-menu.menu-dark .navigation > li.active > a {
+    background : -webkit-linear-gradient(332deg, #4a9e73, rgb(74, 158, 115));
+    background :         linear-gradient(118deg, #4a9e73, rgb(74, 158, 115));
+    box-shadow : 0 0 2px 1px rgb(74, 158, 115);
+  }  

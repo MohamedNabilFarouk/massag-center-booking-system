@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*===GENERAL===*/
+body {
+    margin: 0;
+	font-family:Cairo, "Cairo Black", "Cairo ExtraLight", "Cairo Light", "Cairo SemiBold"}
+img {
+  border-style: none;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+ 
+}
+h1, h2, h3, h4, h5, h6{padding-right: 8px; font-family:Cairo, "Cairo Black", "Cairo ExtraLight", "Cairo Light", "Cairo SemiBold";letter-spacing: -1px;}
+
+p{padding-right: 15px}
+.aon-banner2-wrap{background-image: url(../images/bg-ar.jpg);}
+
+.sf-banner-heading-large{letter-spacing: -1px;}
+
+
+.aon-banner2-left{border-right: 10px solid #d6ab40;border-left: 0px solid #d6ab40;color: #fff; padding: 200px 0px 50px 100px;position: relative;}
+.aon-banner2-left:before{left: 315px;}
+.aon-banner2-left:after{left: 315px;}
+.aon-sub-title{letter-spacing: 0px}
+.aon-how-work-right:before{left: 7px;}
+.aon-how-work-right:after{left: 758px;}
+.list-check-style2 li i{right:-40px}
+.aon-banner2-heading{margin-right: 30px;}
+.aon-banner2-heading1{margin-right: 30px;}
+.feather-user1:before{content: "\e972";float: right;padding: 4px;}
+.aon-howLeft-title{font-size: 40px;padding-top: 130px; }
+.aon-med-testimonial2-left{direction: ltr;position: relative;}
+.aon-owl-arrow .owl-next .ar-right::before{right: -400px;}
+.aon-owl-arrow .owl-next .ar-right:after{right: -400px;}
+.aon-owl-arrow .owl-prev .ar-left::before{left: 0px;}
+.aon-owl-arrow .owl-prev .ar-left:after{left: 0px;}
+.aon-f-title:after { float: right;right: 10px;}
+.list-check-style2 li i{left: 645px;}
+.aon-sub-title{letter-spacing: 0px}
+.aon-med-team .aon-med-team-position{padding-right: 15px;}
+.aon-Grid2-exper{padding-right: 15px;}
+
+.fa-chevron-left:before{content: "\f054";}  
+.fa-chevron-right:before{content: "\f053";}
+
+.form-select {background-position: right 11.75rem center;}
+
+.owl-stage{transform:translate3d(0px, 0px, 0px) !important}
+.side-bar .widget .widget-title {text-align: right}
+
+.side-bar .widget .widget-title::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
+  background-color: #1a2e59;
+  width: 50px;
+  height: 3px;
+}
+   
+
+ol.list-num-count > li{padding: 0px 40px;}
+ol.list-num-count > li:before{right: 3px}
+.sf-con-social li {margin-right: 0px;}
+
+.aon-owl-arrow .owl-next .ar-right::before{right: -45px}
+.aon-owl-arrow .owl-next .ar-right::after{right: -45px}
+.aon-owl-arrow .owl-prev .ar-left::before {right: 50px}
+.aon-owl-arrow .owl-prev .ar-left:after{right: 50px}
+.aon-contact-1-bg{left: 800px}
+.login-sign-head span {letter-spacing: 0px;}
+.login-sign-head strong {font-size: 35px;}
+.sf-radio-checkbox input[type=checkbox] + label:before, .sf-radio-checkbox input[type=radio] + label:before{right:0px}
+.sf-radio-checkbox input[type=checkbox] + label, .sf-radio-checkbox input[type=radio] + label{padding-right: 30px !important}
+
+.aon-blog-style-1 .post-title{font-size: 20px;}
+.aon-med-testimonial2-right{position: absolute; ;right: 830px !important; top: 90px ;}
+.aon-med-testimonial2-right{position: absolute; ;right: 830pxd !important; top: 90px ;}
+.owl-carousel .owl-stage-outer{direction: rtl;}
+
+

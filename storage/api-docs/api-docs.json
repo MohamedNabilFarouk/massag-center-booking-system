@@ -1,0 +1,1894 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Your super  ApplicationAPI",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/client/account": {
+            "post": {
+                "tags": [
+                    "client/account"
+                ],
+                "summary": "check password",
+                "description": "check client password",
+                "operationId": "b8e5f69cb390d3e4f50ac54a2f896425",
+                "requestBody": {
+                    "description": "check client password",
+                    "required": true
+                },
+                "responses": {
+                    "401": {
+                        "description": "Invalid Password"
+                    },
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    }
+                }
+            }
+        },
+        "/client/account/changepassword": {
+            "post": {
+                "tags": [
+                    "client/account"
+                ],
+                "summary": "change password",
+                "description": "change client password",
+                "operationId": "2bbdfb50fa54b5090dd449a0973325b3",
+                "requestBody": {
+                    "description": "change client password",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "password",
+                                    "old_password"
+                                ],
+                                "properties": {
+                                    "password": {
+                                        "type": "string",
+                                        "format": "password"
+                                    },
+                                    "old_password": {
+                                        "type": "string",
+                                        "format": "password"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "401": {
+                        "description": "Invalid Password"
+                    },
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    }
+                }
+            }
+        },
+        "/client/account/ChangePicture": {
+            "post": {
+                "tags": [
+                    "client/account"
+                ],
+                "summary": "change picture",
+                "description": "change client picture",
+                "operationId": "1ef9723c45ca7e95eb2df00fa7e9d499",
+                "requestBody": {
+                    "description": "change client picture",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "profile_image"
+                                ],
+                                "properties": {
+                                    "profile_image": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    }
+                }
+            }
+        },
+        "/client/account/SocialAddMobile": {
+            "post": {
+                "tags": [
+                    "client/account"
+                ],
+                "summary": "social add mobile",
+                "description": "client social add mobile",
+                "operationId": "a59bd71053c30b698cacaaeabf4cc68f",
+                "requestBody": {
+                    "description": "client social add mobile",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "mobile",
+                                    "country_code"
+                                ],
+                                "properties": {
+                                    "mobile": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "contry_code": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Mobile Already Exist"
+                    }
+                }
+            }
+        },
+        "/client/account/": {
+            "post": {
+                "tags": [
+                    "client/account"
+                ],
+                "summary": "client edit account",
+                "description": "client edit account",
+                "operationId": "14c640b814d31c06b79a196ac231fe8e",
+                "requestBody": {
+                    "description": "clientedit account",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "mobile",
+                                    "country_code",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "mobile": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "contry_code": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    }
+                }
+            }
+        },
+        "/client/address/": {
+            "post": {
+                "tags": [
+                    "client/address"
+                ],
+                "summary": "client check zone",
+                "description": "client check zone",
+                "operationId": "bf9d02608d711453500f43081b2490cf",
+                "requestBody": {
+                    "description": "client check zone",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "lat",
+                                    "lng"
+                                ],
+                                "properties": {
+                                    "lat": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "contry_code": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/client/address/Edit": {
+            "post": {
+                "tags": [
+                    "client/address"
+                ],
+                "summary": "client edit",
+                "description": "client address edit",
+                "operationId": "9502cbf9321fdb3fdf3a3042f6ab8b2e",
+                "requestBody": {
+                    "description": "client address edit",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "area",
+                                    "street",
+                                    "lat",
+                                    "lng"
+                                ],
+                                "properties": {
+                                    "lat": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "lng": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "area": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "street": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success"
+                    },
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    }
+                }
+            }
+        },
+        "/client/address/create": {
+            "get": {
+                "tags": [
+                    "client/address"
+                ],
+                "summary": "Active or inactive",
+                "description": "set customer address active or inactive",
+                "operationId": "d01bd50da18efd89c5fa54b92657835b",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "client/address"
+                ],
+                "summary": "client address create",
+                "description": "client address create",
+                "operationId": "990aa9cce5ccd3a60c64f3de133e8bb3",
+                "requestBody": {
+                    "description": "client address create",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "area",
+                                    "street",
+                                    "lat",
+                                    "lng"
+                                ],
+                                "properties": {
+                                    "lat": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "lng": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "area": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "street": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success"
+                    },
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    }
+                }
+            }
+        },
+        "/client/address/delete": {
+            "delete": {
+                "tags": [
+                    "client/address"
+                ],
+                "summary": "delete address",
+                "description": "delete customer address",
+                "operationId": "632928a896fc937f2b2ac63542a19b0b",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/ads": {
+            "get": {
+                "tags": [
+                    "client/ads"
+                ],
+                "summary": "get all ads",
+                "description": "get all ads",
+                "operationId": "a4a9f85b18edda5a4984290ee745f932",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/ads/{id}": {
+            "get": {
+                "tags": [
+                    "client/ads"
+                ],
+                "summary": "view client ads",
+                "description": "view client ads",
+                "operationId": "41b5757b46173ed9335cdaa015ba6ddb",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/auth/login": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "summary": "Sign in",
+                "description": "Login by mobile, password,country_code",
+                "operationId": "authLogin",
+                "requestBody": {
+                    "description": "Pass user credentials",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "social_type",
+                                    "social_id,social_token,name"
+                                ],
+                                "properties": {
+                                    "mobile": {
+                                        "type": "int",
+                                        "format": "num",
+                                        "example": "0111234565"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "format": "password",
+                                        "example": "PassWord12345"
+                                    },
+                                    "country_code": {
+                                        "type": "string",
+                                        "example": "+02"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "422": {
+                        "description": "Wrong credentials response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Sorry, wrong  data"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/client/cart": {
+            "get": {
+                "tags": [
+                    "client/cart"
+                ],
+                "summary": "get all cart data",
+                "description": "get all cart data",
+                "operationId": "6f67b3e210ce51939ec23f65e5b3af27",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/cart/Sync": {
+            "get": {
+                "tags": [
+                    "client/cart"
+                ],
+                "summary": "Sync all cart item",
+                "description": "Sync all cart item",
+                "operationId": "9a8ec4f5b02c666eb27ea2ec95be6759",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/cart/AddToCart": {
+            "post": {
+                "tags": [
+                    "client/cart"
+                ],
+                "summary": "client add to cart",
+                "description": "client add to cart",
+                "operationId": "befa1a0b0eb94bc3a0f5e61680e94391",
+                "requestBody": {
+                    "description": "client add to cart",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "count",
+                                    "price_id"
+                                ],
+                                "properties": {
+                                    "count": {
+                                        "type": "integer",
+                                        "format": "int"
+                                    },
+                                    "price_id": {
+                                        "type": "integer",
+                                        "format": "int"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "success"
+                    },
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    }
+                }
+            }
+        },
+        "/client/favorits": {
+            "get": {
+                "tags": [
+                    "client/favorits"
+                ],
+                "summary": "get all favorits data",
+                "description": "get all favorits data",
+                "operationId": "c1cef322aa1fb0bc5f2139bf1cb8cfb7",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/favorits/Sync": {
+            "get": {
+                "tags": [
+                    "client/favorits"
+                ],
+                "summary": " Sync all data",
+                "description": " Sync all data",
+                "operationId": "9bf52a93b32506a0013e7501ec7b45b2",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/favorits/Toggle": {
+            "get": {
+                "tags": [
+                    "client/favorits"
+                ],
+                "summary": " Toggle all data",
+                "description": " Toggle all data",
+                "operationId": "2f8f2073b0a383a995e6bcf2a3fc7148",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/home/": {
+            "get": {
+                "tags": [
+                    "client/Home"
+                ],
+                "summary": " get all home data",
+                "description": " get all home data",
+                "operationId": "ec755fb6029fe8b5def25262290b9d7f",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/home/Ads": {
+            "get": {
+                "tags": [
+                    "client/Home"
+                ],
+                "summary": " get all home ads data",
+                "description": " get all home ads data",
+                "operationId": "b132a0b755c2336b997b3ec7a03afe6d",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/home/LatestProviders": {
+            "get": {
+                "tags": [
+                    "client/Home"
+                ],
+                "summary": " get latest providers data",
+                "description": " get latest providers data",
+                "operationId": "afa1beb07c169eb77eb022377a9b322d",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/home/PopularProducts": {
+            "get": {
+                "tags": [
+                    "client/Home"
+                ],
+                "summary": " get all home popular products data",
+                "description": " get all home popular products data",
+                "operationId": "6883e3fc0276052645695f8c3772e5d3",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/home/LessThanFifty": {
+            "get": {
+                "tags": [
+                    "client/Home"
+                ],
+                "summary": " get all home  data less than finfty",
+                "description": " get all home data less than fifty",
+                "operationId": "ecbb85b53ec6cadda7c1de42cb409ae5",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/home/LatestOrder": {
+            "get": {
+                "tags": [
+                    "client/Home"
+                ],
+                "summary": " get all home latest orders data",
+                "description": " get all home latest orders data",
+                "operationId": "6bc1cded30dcf96eff828c1fdaab4e31",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/home/Offers": {
+            "get": {
+                "tags": [
+                    "client/Home"
+                ],
+                "summary": " get all home offers data",
+                "description": " get all home offers data",
+                "operationId": "c230ac9e66889c7f2fe6ae8a55412f89",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/offers": {
+            "get": {
+                "tags": [
+                    "client/offers"
+                ],
+                "summary": "get all offers data",
+                "description": "get all offers data",
+                "operationId": "200979c67353b8b02beb06a0f8317a86",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/offers/{id}": {
+            "get": {
+                "tags": [
+                    "client/offers"
+                ],
+                "summary": "view offers data",
+                "description": "view offers data",
+                "operationId": "c031fcba24c6f5c87ea2b18397e27aa1",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/orders/DeleviryFees": {
+            "post": {
+                "tags": [
+                    "client/orders"
+                ],
+                "summary": "client deleviry fees data",
+                "description": "client deleviry fees data",
+                "operationId": "8dc417cc34bb7130616a695874914e67",
+                "requestBody": {
+                    "description": "client deleviry fees data",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "lat",
+                                    "lng",
+                                    "provider_id"
+                                ],
+                                "properties": {
+                                    "lat": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "lng": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "provider_id": {
+                                        "type": "integer",
+                                        "format": "int"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/client/orders/ActivePromo": {
+            "post": {
+                "tags": [
+                    "client/orders"
+                ],
+                "summary": "client ActivePromo data",
+                "description": "client ActivePromo data",
+                "operationId": "8921699fc8a0256c9f92cad25218f936",
+                "requestBody": {
+                    "description": "client ActivePromo data",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "promo"
+                                ],
+                                "properties": {
+                                    "promo": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        },
+        "/client/orders/": {
+            "post": {
+                "tags": [
+                    "client/orders"
+                ],
+                "summary": "client create order",
+                "description": "client create order",
+                "operationId": "8ebfa0657bccbe48329aef73d89d4fc9",
+                "requestBody": {
+                    "description": "client create order",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "product_prices_id",
+                                    "product_prices_count",
+                                    "product_prices_notes",
+                                    "promo_code",
+                                    "address_id",
+                                    "payment_method",
+                                    "provider_id",
+                                    "order_time"
+                                ],
+                                "properties": {
+                                    "product_prices_id": {
+                                        "type": "integer",
+                                        "format": "integer"
+                                    },
+                                    "product_prices_count": {
+                                        "type": "integer",
+                                        "format": "integer"
+                                    },
+                                    "product_prices_notes": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "promo_code": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "address_id": {
+                                        "type": "integer",
+                                        "format": "integer"
+                                    },
+                                    "payment_method": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "provider_id": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "order_time": {
+                                        "type": "timestamp",
+                                        "format": "timestamp"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/client/orders/cancel": {
+            "get": {
+                "tags": [
+                    "client/orders"
+                ],
+                "summary": "cancel order",
+                "description": "cancel order",
+                "operationId": "990e940f37f7a4629deb7ee46d1ec518",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/orders/{id}": {
+            "get": {
+                "tags": [
+                    "client/orders"
+                ],
+                "summary": "get order by id",
+                "description": "get order by id",
+                "operationId": "1f2d36c02aa88cc91e326f1d6cd9906c",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/orders": {
+            "get": {
+                "tags": [
+                    "client/orders"
+                ],
+                "summary": "list all orders",
+                "description": "list all  orders",
+                "operationId": "592f960e794ab9d4088cb56ad3f47fdf",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/products": {
+            "get": {
+                "tags": [
+                    "client/products"
+                ],
+                "summary": "list all products",
+                "description": "list all products",
+                "operationId": "7fe286447142219e62914826af6c89fe",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/products/{id}": {
+            "get": {
+                "tags": [
+                    "client/products"
+                ],
+                "summary": "list product by id",
+                "description": "list product by id",
+                "operationId": "bd9cbf05d3b2944b8c62832ca5e7a48c",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/providers": {
+            "get": {
+                "tags": [
+                    "client/products"
+                ],
+                "summary": "list all providers",
+                "description": "list all providers",
+                "operationId": "8250f4aacd86f92c039fe1b0d141b47f",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/client/providers/{id}": {
+            "get": {
+                "tags": [
+                    "client/products"
+                ],
+                "summary": "list provider by id",
+                "description": "list  provider by id",
+                "operationId": "414d07184de4098d9b9e8446fe0268cd",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/account/CheckPassword": {
+            "post": {
+                "tags": [
+                    "provider/account"
+                ],
+                "summary": "check provider account",
+                "description": "check provider account",
+                "operationId": "41b37791590bf7693d336ed332b7399a",
+                "requestBody": {
+                    "description": "check provider account",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "password"
+                                ],
+                                "properties": {
+                                    "password": {
+                                        "type": "string",
+                                        "format": "passwprd"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "401": {
+                        "description": "Invalid Password"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/account/ChangePassword": {
+            "post": {
+                "tags": [
+                    "provider/account"
+                ],
+                "summary": "Change provider account password",
+                "description": "Change provider account password",
+                "operationId": "d5d2e5bbe85555e1e9b11616f7395982",
+                "requestBody": {
+                    "description": "Change provider account password",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "password",
+                                    "old_password"
+                                ],
+                                "properties": {
+                                    "password": {
+                                        "type": "string",
+                                        "format": "passwprd"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "401": {
+                        "description": "Invalid Password"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/account/ChangePicture": {
+            "post": {
+                "tags": [
+                    "provider/account"
+                ],
+                "summary": "Change provider account picture",
+                "description": "Change provider account picture",
+                "operationId": "43ff215ba68a479d664240b6595473aa",
+                "requestBody": {
+                    "description": "Change provider account picture",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "profile_image"
+                                ],
+                                "properties": {
+                                    "profile_image": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/account/EditAccount": {
+            "post": {
+                "tags": [
+                    "provider/account"
+                ],
+                "summary": "edit provider account ",
+                "description": "edit provider account ",
+                "operationId": "67f0bd71faf45708da5d51dd7b707107",
+                "requestBody": {
+                    "description": "edit provider account ",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "mobile",
+                                    "country_code",
+                                    "secret_key",
+                                    "merchant_mail",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "mobile": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "country_code": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "secret_key": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "merchant_mail": {
+                                        "type": "string",
+                                        "format": "email"
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/account/Phasetwo": {
+            "post": {
+                "tags": [
+                    "provider/account"
+                ],
+                "summary": " provider phasetwo ",
+                "description": "provider phasetwo ",
+                "operationId": "6c658ddd788a85ed9371f78f7702b32d",
+                "requestBody": {
+                    "description": "provider phasetwo ",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "fifteen_km_price",
+                                    "thirty_km_price",
+                                    "payment_methods"
+                                ],
+                                "properties": {
+                                    "fifteen_km_price": {
+                                        "type": "number",
+                                        "format": "double"
+                                    },
+                                    "thirty_km_price": {
+                                        "type": "number",
+                                        "format": "double"
+                                    },
+                                    "payment_methods": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/account/MyProfileImage": {
+            "post": {
+                "tags": [
+                    "provider/account"
+                ],
+                "summary": " provider profile image ",
+                "description": "provider profile image ",
+                "operationId": "0608d8930c8e313bd60a1906effd22ed",
+                "requestBody": {
+                    "description": "provider profile image ",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "images"
+                                ],
+                                "properties": {
+                                    "images": {
+                                        "type": "string",
+                                        "format": "file"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/ToggleCategory": {
+            "get": {
+                "tags": [
+                    "provider/account"
+                ],
+                "summary": "get toggle category",
+                "description": "get toggle category",
+                "operationId": "865d517ee018596ea8e8fc50e813ec91",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/auth/login": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "summary": "Sign in",
+                "description": "Login by mobile, password,country_code",
+                "operationId": "authLogin",
+                "requestBody": {
+                    "description": "Pass user credentials",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "social_type",
+                                    "social_id,social_token,name"
+                                ],
+                                "properties": {
+                                    "mobile": {
+                                        "type": "int",
+                                        "format": "num",
+                                        "example": "0111234565"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "format": "password",
+                                        "example": "PassWord12345"
+                                    },
+                                    "country_code": {
+                                        "type": "string",
+                                        "example": "+02"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "422": {
+                        "description": "Wrong credentials response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Sorry, wrong  data"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/provider/cards/PaymentMethods": {
+            "get": {
+                "tags": [
+                    "provider/cards"
+                ],
+                "summary": "get payment mathod",
+                "description": "get paymeny method",
+                "operationId": "07c7c3d6115e9b1dc73b126aa0f31a40",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/cards/Category": {
+            "get": {
+                "tags": [
+                    "provider/cards"
+                ],
+                "summary": "get provider category",
+                "description": "get provider category",
+                "operationId": "821255cf77e377ae580e1b2defc9f332",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/cards/Units": {
+            "get": {
+                "tags": [
+                    "provider/cards"
+                ],
+                "summary": "get provider units",
+                "description": "get provider units",
+                "operationId": "a0c42fd1ca914376cb5a5a66673c304c",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/cards/UnitsByCategory/{id}": {
+            "get": {
+                "tags": [
+                    "provider/cards"
+                ],
+                "summary": "get provider unit by category",
+                "description": "get provider unit by category",
+                "operationId": "c13828155abd76e10fca7003ba3d5b7f",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/images/Delete": {
+            "delete": {
+                "tags": [
+                    "provider/images"
+                ],
+                "summary": "delete provider image",
+                "description": "delete provider image",
+                "operationId": "1a138b8a2d168697523e4b0edff78ce6",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/offers": {
+            "get": {
+                "tags": [
+                    "provider/offers"
+                ],
+                "summary": "list provider offers",
+                "description": "list provider offers",
+                "operationId": "eb00cc70ff404323b48010fc963d62ff",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/offers/create": {
+            "post": {
+                "tags": [
+                    "provider/offers"
+                ],
+                "summary": "provider create offers",
+                "description": "provider create offers",
+                "operationId": "ca71a9d181a9a13c4abf9c423e60970e",
+                "requestBody": {
+                    "description": "provider create offers",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "end_date",
+                                    "offer_prices"
+                                ],
+                                "properties": {
+                                    "end_date": {
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "offer_prices": {
+                                        "type": "integer",
+                                        "format": "int32"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/prices/create": {
+            "post": {
+                "tags": [
+                    "provider/prices"
+                ],
+                "summary": "provider create price",
+                "description": "provider create price",
+                "operationId": "7458311b76b20be110717563d1dd1c2c",
+                "requestBody": {
+                    "description": "provider create price",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "title_ar",
+                                    "title",
+                                    "price",
+                                    "unit_id",
+                                    "product_id"
+                                ],
+                                "properties": {
+                                    "title_ar": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "title": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "price": {
+                                        "type": "integer"
+                                    },
+                                    "unit_id": {
+                                        "type": "integer"
+                                    },
+                                    "product_id": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/prices/Edit/{id}": {
+            "post": {
+                "tags": [
+                    "provider/prices"
+                ],
+                "summary": "provider edit price",
+                "description": "provider edit price",
+                "operationId": "ba787c5bcb43454e671dc8f68f7a2521",
+                "requestBody": {
+                    "description": "provider edit price",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "title_ar",
+                                    "title",
+                                    "price",
+                                    "unit_id",
+                                    "product_id"
+                                ],
+                                "properties": {
+                                    "title_ar": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "title": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "price": {
+                                        "type": "integer"
+                                    },
+                                    "unit_id": {
+                                        "type": "integer"
+                                    },
+                                    "product_id": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/prices/Delete/{id}": {
+            "delete": {
+                "tags": [
+                    "provider/prices"
+                ],
+                "summary": "delete provider price",
+                "description": "delete provider price",
+                "operationId": "03a93f155be01c00cba0b3aa3ed76f37",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/products/MyCAtegories": {
+            "get": {
+                "tags": [
+                    "provider/products"
+                ],
+                "summary": "list provider's product categories",
+                "description": "list provider's  product categories",
+                "operationId": "ba0e0965c9a19f4f4cc58f47b0b0b3be",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/products/": {
+            "get": {
+                "tags": [
+                    "provider/products"
+                ],
+                "summary": "list all provider products",
+                "description": "list all provider products",
+                "operationId": "92c0518d1269f65b3a8d9f1055ad2a8b",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/products/view": {
+            "get": {
+                "tags": [
+                    "provider/products"
+                ],
+                "summary": "get provider product by id",
+                "description": "get provider product by id",
+                "operationId": "f106f5b762eeefd5ee4794a9cde4d9ae",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/producta/create": {
+            "post": {
+                "tags": [
+                    "provider/products"
+                ],
+                "summary": "provider create product",
+                "description": "provider create product",
+                "operationId": "b487a08aa75e6f048e76071dee26c518",
+                "requestBody": {
+                    "description": "provider create product",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "title_ar",
+                                    "title",
+                                    "prices",
+                                    "description",
+                                    "description_ar",
+                                    "unit_ids",
+                                    "price_titles",
+                                    "price_title_ars",
+                                    "category_id",
+                                    "prepare_time"
+                                ],
+                                "properties": {
+                                    "title_ar": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "title": {
+                                        "type": "string",
+                                        "format": "string"
+                                    },
+                                    "prices": {
+                                        "type": "integer"
+                                    },
+                                    "unit_ids": {
+                                        "type": "integer"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "description_ar": {
+                                        "type": "string"
+                                    },
+                                    "price_titles": {
+                                        "type": "string"
+                                    },
+                                    "price_titles_ars": {
+                                        "type": "string"
+                                    },
+                                    "category_id": {
+                                        "type": "integer"
+                                    },
+                                    "prepare_time": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/producta/Images": {
+            "post": {
+                "tags": [
+                    "provider/products"
+                ],
+                "summary": "provider product image",
+                "description": "provider product image",
+                "operationId": "bbbda8222417ffa66d538481ac586e97",
+                "requestBody": {
+                    "description": "provider product image",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "images"
+                                ],
+                                "properties": {
+                                    "images": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/products/Active/{id}": {
+            "get": {
+                "tags": [
+                    "provider/products"
+                ],
+                "summary": "active provider products by id",
+                "description": "active provider products  by id",
+                "operationId": "fea57a24077d10b5088fc6e4ce20650c",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/products/Delete/{id}": {
+            "delete": {
+                "tags": [
+                    "provider/products"
+                ],
+                "summary": "delete provider product",
+                "description": "delete provider product",
+                "operationId": "6b1bfc08597b9388d6a6341f3bcdbd0d",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/promo-codes": {
+            "get": {
+                "tags": [
+                    "provider/promo-codes"
+                ],
+                "summary": "list all provider promo-codes",
+                "description": "list all provider promo-codes ",
+                "operationId": "5dfda2ea88ad22b983a5240536ed37ea",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/promo-codes/Edit/{id}": {
+            "post": {
+                "tags": [
+                    "provider/promo-codes"
+                ],
+                "summary": "provider promo-code edit",
+                "description": "provider promo-code edit",
+                "operationId": "c8eedaf2cb0d71a07075f6b790154368",
+                "requestBody": {
+                    "description": "provider promo-code edit",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "expiry_date",
+                                    "value"
+                                ],
+                                "properties": {
+                                    "expiry_date": {
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "value": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/promo-codes/Create": {
+            "post": {
+                "tags": [
+                    "provider/promo-codes"
+                ],
+                "summary": "provider promo-code create",
+                "description": "provider promo-code create",
+                "operationId": "6c7fd817630e37fcea2c215f6945bfff",
+                "requestBody": {
+                    "description": "provider promo-code create",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "expiry_date",
+                                    "value"
+                                ],
+                                "properties": {
+                                    "expiry_date": {
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "value": {
+                                        "type": "string",
+                                        "format": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "Missing Request Parameters"
+                    },
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        },
+        "/provider/promo-codes/Delete/{id}": {
+            "delete": {
+                "tags": [
+                    "provider/promo-codes"
+                ],
+                "summary": "delete promo-codes",
+                "description": "delete promo-codes",
+                "operationId": "9e011b6a2b17dc513abf72bc3e7c8d68",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/provider/promo-codes/Active/{id}": {
+            "get": {
+                "tags": [
+                    "provider/promo-codes"
+                ],
+                "summary": "active provider promo-codes by id",
+                "description": "active provider promo-codes  by id",
+                "operationId": "fa3611a4e8881c144613deaeae29197f",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

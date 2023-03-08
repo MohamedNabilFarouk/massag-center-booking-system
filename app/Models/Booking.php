@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
+
+class Booking extends Model
+{
+    use HasFactory;
+    use Notifiable;
+    protected $table = 'booking';
+    protected $guarded=[];
+
+
+
+
+    public function user(){
+        return $this->belongsTo(User::class , 'user_id', 'id');
+    }
+    public function team(){
+        return $this->belongsTo(Team::class, 'prof_id','id');
+    }
+    public function specialTeam(){
+        return $this->belongsTo(Team::class, 'special_prof_id','id');
+    }
+    public function package(){
+        return $this->belongsTo(Package::class, 'package_id','id');
+    }
+}

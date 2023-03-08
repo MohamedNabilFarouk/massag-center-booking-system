@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+    position: relative;
+    max-width: 100%;
+    font-size: 0.875rem;
+    direction: rtl;
+}
+
+
+.header {
+    height: 7.5rem;
+    z-index: 1;
+    position: relative;
+    padding: 0rem;
+    background: var(--headerbg);
+    z-index: 3;
+    padding-right: 20.563rem;
+    padding-top: 0rem;
+    transition: all .2s ease;
+}
+
+.content-body {
+    margin-right: 20rem;
+	 margin-left: 0rem;
+    z-index: 0;
+    transition: all .2s ease;
+}
+
+.dlabnav .metismenu .has-arrow:after {
+    border-top: 0.3125rem solid #c8c8c8;
+    border-left: 0.3125rem solid #c8c8c8;
+    border-bottom: 0.3125rem solid transparent;
+    border-right: 0.3125rem solid transparent;
+    right: 14rem;
+    top: 48%;
+    -webkit-transform: rotate(-225deg) translateY(-50%);
+    transform: rotate(313deg) translateY(-50%);
+}
+[data-sidebar-style="full"][data-layout="vertical"] .dlabnav .metismenu > li .has-arrow:after {
+    right: 15.5rem;
+}
+
+
+.dlabnav .metismenu ul a {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    font-size: .9375rem;
+    padding-right: 5rem;
+    -webkit-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all .5s;
+}
+
+.dropdown-menu.show {
+	right: -115px;}
